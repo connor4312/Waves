@@ -3,12 +3,18 @@
 	<head>
 		<title>Waves example</title>
 
-		<link rel="stylesheet" type="text/css" href="/path/to/Waves.css" />
-		
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script type="text/javascript" src="/path/to/Waves.js"></script>
+		<link rel="stylesheet" type="text/css" href="/path/to/waves.css" />
+
 	</head>
 	<body>
+		<span class="waves-effect waves-button">
+			<a href="#">Click Here</a>
+		</span>
 
+		<script type="text/javascript" src="/path/to/waves.js"></script>
+		<script type="text/javascript">
+			var w = new Waves();
+			w.displayEffect();
+		</script>
 	</body>
 </html>
