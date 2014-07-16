@@ -53,8 +53,6 @@
                 var el = this;
                 var width = el.clientWidth;
 
-                console.log();
-
                 // Get first ripple
                 var ripple = null;
 
