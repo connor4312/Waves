@@ -1,6 +1,6 @@
 
 /*!
- * Waves v0.2.0
+ * Waves v0.2.1
  * https://publicis-indonesia.github.io/Waves
  *
  * Copyright 2014 Publicis Metro Indonesia, PT. and other contributors
@@ -15,6 +15,25 @@
 
         var $$ = document.querySelectorAll.bind(document);
 
+        // Find exact position of element
+        function position(obj) {
+
+            var left = 0;
+            var top = 0;
+            
+            if (obj.offsetParent) {
+                do {
+                    left += obj.offsetLeft;
+                    top += obj.offsetTop;
+                } while (obj = obj.offsetParent);
+            }
+
+            return {
+                top: top, 
+                left: left
+            };
+        }
+
         var Effect = {
 
             show: function(e) {
@@ -27,8 +46,9 @@
                 el.appendChild(ripple);
 
                 // Get click coordinate and element witdh
-                var relativeX   = (e.pageX - el.offsetLeft);
-                var relativeY   = (e.pageY - el.offsetTop);
+                var pos         = position(el);
+                var relativeY   = (e.pageY - pos.top);
+                var relativeX   = (e.pageX - pos.left);
                 var width       = el.clientWidth;
 
                 // Attach data to element
@@ -52,7 +72,7 @@
                 
                 var el = this;
                 var width = el.clientWidth;
-
+                
                 // Get first ripple
                 var ripple = null;
 
