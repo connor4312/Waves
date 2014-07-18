@@ -39,7 +39,15 @@
             // Trigger element action if they are waves-button
             action: function(e) {
 
+                // catch window.event
+                e = e || window.event; 
+
                 var el = this;
+
+                // Disable action if right click triggered this event
+                if (e.which !== 1) {
+                    return false;
+                }
 
                 if (el.className.indexOf('waves-button') !== -1) {
 
