@@ -5,16 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <link rel="icon" href="https://publicis.co.id/favicon.ico" />
 
-        <!-- Remove Tap Highlight on Windows Phone IE -->
-        <meta name="msapplication-tap-highlight" content="no"/> 
-
 		<title>Waves</title>
 		<meta name="description" content="Waves - Click effect inspired by Google Material Design" />
 
 		<link rel="stylesheet" type="text/css" href="https://publicis.co.id/assets/font/opensans_light/main.css">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="./static/prims.css">
-		<link rel="stylesheet" type="text/css" href="./waves.css">
+		<link rel="stylesheet" type="text/css" href="./waves.min.css">
 
 		<link rel="stylesheet" type="text/css" href="./static/style.css">
 
@@ -43,75 +40,35 @@
 				<h2>Waves on buttons</h2>
 
 				<p>
-					<strong>Plain Buttons</strong>
+					<strong>Flat buttons</strong>
 					<a class="toggle-code" data-source="#plainButtonCode">(show source)</a>
 				</p>
 
 				<p class="text-center">
-					<span class="waves-effect waves-button">
-						<a>Button A</a>
-					</span>
-					<span class="waves-effect waves-button">
-						<button>Button B</button>
-					</span>
-					<span class="waves-effect waves-button">
-						<input type="submit" value="Button C">
-					</span>
-					<span class="waves-effect waves-button">
-						<input type="button" value="Button D">
-					</span>
+					<a class="waves-effect waves-button">Button A</a>
+					<button class="waves-effect waves-button">Button B</button>
+					<input class="waves-effect waves-button" type="submit" value="Button C">
+					<input class="waves-effect waves-button" type="button" value="Button D">
 				</p>
 
 				<div id="plainButtonCode" class="hide">
-					<pre data-src="./sources/button-plain.html"></pre>
+					<pre data-src="./sources/button-flat.html"></pre>
 				</div>
 
 				<p>
-					<strong>Colored Buttons</strong>
-					<a class="toggle-code" data-source="#coloredButtonCode">(show source)</a>
-				</p>
-
-				<p class="text-center">
-					<span class="waves-effect waves-button" style="background: #01BCFF;color:#fff">
-						<a>Button A</a>
-					</span>
-					<span class="waves-effect waves-button waves-light" style="background: #1bb556;color: #fff;">
-						<button>Button B</button>
-					</span>
-					<span class="waves-effect waves-button" style="background: #ff4f0f;color:#fff">
-						<input type="submit" value="Button C">
-					</span>
-					<span class="waves-effect waves-button waves-light" style="background: #666;color:#fff">
-						<input type="button" value="Button D">
-					</span>
-				</p>
-
-				<div id="coloredButtonCode" class="hide">
-					<pre data-src="./sources/button-colored.html"></pre>
-				</div>
-
-				<p>
-					<strong>Colored Buttons (will raise)</strong>
+					<strong>Float buttons</strong>
 					<a class="toggle-code" data-source="#raisedButtonCode">(show source)</a>
 				</p>
 
 				<p class="text-center">
-					<span class="waves-effect waves-button waves-raised" style="background: #01BCFF;color:#fff">
-						<a>Button A</a>
-					</span>
-					<span class="waves-effect waves-button waves-light waves-raised" style="background: #1bb556;color: #fff;">
-						<button>Button B</button>
-					</span>
-					<span class="waves-effect waves-button waves-raised" style="background: #ff4f0f;color:#fff">
-						<input type="submit" value="Button C">
-					</span>
-					<span class="waves-effect waves-button waves-light waves-raised" style="background: #666;color:#fff">
-						<input type="button" value="Button D">
-					</span>
+					<a class="waves-effect waves-button waves-float" style="background: #01BCFF;color:#fff">Button A</a>
+					<button class="waves-effect waves-button waves-light waves-float" style="background: #1bb556;color: #fff;">Button B</button>
+					<input class="waves-effect waves-button waves-float" style="background: #ff4f0f;color:#fff" type="submit" value="Button C">
+					<input class="waves-effect waves-button waves-light waves-float" style="background: #666;color:#fff" type="button" value="Button D">
 				</p>
 
 				<div id="raisedButtonCode" class="hide">
-					<pre data-src="./sources/button-raise.html"></pre>
+					<pre data-src="./sources/button-float.html"></pre>
 				</div>
 			</div>
 
@@ -172,7 +129,7 @@
 
 				<div class="box waves-effect waves-block">Plain Box</div>
 				<div class="box colored-box waves-effect waves-light waves-block">Colored Box</div>
-				<div class="box raised-box waves-effect waves-raised waves-block">Raised Box</div>
+				<div class="box raised-box waves-effect waves-float waves-block">Raised Box</div>
 				<div class="clear"></div>
 
 				<div id="divOtherCode" class="hide">
@@ -193,7 +150,7 @@
 					Image Source: <a href="https://www.flickr.com/photos/aigle_dore/5238554034" target="_blank">&copy; Moyan Brenn. Flickr</a>
 				</p>
 				<p class="text-center">
-					<span class="waves-effect waves-light waves-raised">
+					<span class="waves-effect waves-light waves-float">
 						<img src="https://farm6.staticflickr.com/5241/5238554034_851a63e262_n.jpg">
 					</span>
 				</p>
@@ -210,16 +167,22 @@
 				<h2>Getting Started</h2>
 
 				<p>
-					It's easy to use Waves. Download the latest version of Waves from <a href="https://github.com/publicis-indonesia/Waves/releases" target="_blank">Github repository</a>. Just include waves.css and waves.js to your HTML file. And Waves is ready to use!
+					It's easy to use Waves. Download the latest version of Waves from <a href="https://github.com/publicis-indonesia/Waves/releases">Github repository</a>. Just include waves.min.css and waves.min.js to your HTML file. And Waves is ready to use!
 				</p>
 
 				<pre data-src="./sources/example-html-file.html"></pre>
 
 				<p>
-					To put Waves effect on your buttons, wrap it inside a <code class="language-markup">&lt;span&gt;</code> that contain <code class="language-css">.waves-effect</code> and <code class="language-css">.waves-button</code> class.
+					To put Waves effect on your buttons, just add <code class="language-css">.waves-effect</code> and <code class="language-css">.waves-button</code> class to your buttons.
 				</p>
 
 				<pre data-src="./sources/example-html-button.html"></pre>
+
+				<p>
+					Normally, the effect will not work on single tag element like <code class="language-markup">&lt;input&gt;</code>. That's why Waves will wrap <code class="language-markup">&lt;input&gt;</code> inside <code class="language-markup">&lt;i&gt;</code> automatically if you display the effect.
+				</p>
+
+				<pre data-src="./sources/example-html-input-wrapper.html"></pre>
 
 				<p>
 					Waves support Font Awesome icons, so you can give the icons Waves effect. It's simple, just give additional <code class="language-css">.waves-effect</code> and <code class="language-css">.waves-icon</code> class to your <code class="language-markup">&lt;i&gt;</code> tags and Waves will wrap icon inside circle spot that will prevent Waves effect spreading.
@@ -249,7 +212,7 @@
 
 				<p>
 					Not only give your "Waves effect", Waves also provide raise effect when you click an element
-					by adding <code class="language-css">.waves-raised</code> class to the element. Once again, before put raise effect, your have to make sure the element has been colored, to prevent weird shadow on the element.
+					by adding <code class="language-css">.waves-float</code> class to the element. Once again, before put raise effect, your have to make sure the element has been colored, to prevent weird shadow on the element.
 				</p>
 
 				<pre data-src="./sources/example-html-raised.html"></pre>
@@ -272,8 +235,7 @@
 				</p>
 
 				<p>
-					Waves is not fully compatible with mobile devices, because it still depends on click 
-					event. We will add touch support in the future.
+					Waves is partially support mobile device by using <code class="languange-js">touchstart</code> and <code class="languange-js">touchend</code> event.
 				</p>
 
 				<p>
@@ -287,38 +249,19 @@
 				</p>
 			</div>
 
-			<div class="doc">
-				<h2>Quick Fix</h2>
-
-				<p>
-					<strong>IE Tap highlight on Windows Phone</strong>
-				</p>
-
-				<p>
-					By default if you access a web page using IE in Windows Phone, you will get tap highlight
-					effect when you tapping a link or button and this highlight will shadowed Waves effect. To prevent this thing happen, you will need to add <code>msapplication-tap-highlight</code> meta tag on your header.
-				</p>
-
-				<pre data-src="./sources/example-html-quick-fix-ie-tap-highlight.html"></pre>
-			</div>
-
-			<meta name="msapplication-tap-highlight" content="no"/> 
-
 			<footer class="text-center">
                 Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="https://github.com/publicis-indonesia/Waves/blob/master/LICENSE" target="_blank">BSD License</a>. 
                 <br>
-                2014 &copy; <a href="https://publicis.co.id/home" target="blank">Publicis Indonesia</a>. All Right Reserved.
+                2014 &copy; <a href="https://publicis.co.id" target="blank">Publicis Indonesia</a>. All Right Reserved.
             </footer>
 
 			<a href="https://github.com/publicis-indonesia/Waves" target="_blank"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
 			
 			<script type="text/javascript" src="./static/prims.js"></script>
-
-			<script type="text/javascript" src="./waves.js"></script>
+			<script type="text/javascript" src="./waves.min.js"></script>
 			<script type="text/javascript">
-				var w = new Waves();
-				w.displayEffect();
+				Waves.displayEffect();
 			</script>
 
 			<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
